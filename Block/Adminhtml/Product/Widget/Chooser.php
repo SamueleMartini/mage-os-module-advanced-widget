@@ -30,13 +30,13 @@ class Chooser extends \Magento\Catalog\Block\Adminhtml\Product\Widget\Chooser
      * @param array $data
      */
     public function __construct(
-        private Context $context,
-        private Data $backendHelper,
-        private CategoryFactory $categoryFactory,
-        private CollectionFactory $collectionFactory,
-        private Category $resourceCategory,
-        private Product $resourceProduct,
-        private StoreManagerInterface $storeManager,
+        protected Context $context,
+        protected Data $backendHelper,
+        protected CategoryFactory $categoryFactory,
+        protected CollectionFactory $collectionFactory,
+        protected Category $resourceCategory,
+        protected Product $resourceProduct,
+        protected StoreManagerInterface $storeManager,
         array $data = []
     ) {
         parent::__construct(
@@ -171,6 +171,8 @@ class Chooser extends \Magento\Catalog\Block\Adminhtml\Product\Widget\Chooser
                 }
             ';
         }
+
+        return '';
     }
 
     /**
